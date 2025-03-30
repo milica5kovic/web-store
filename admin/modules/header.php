@@ -6,16 +6,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-                <a class="nav-link text-light" href="/admin/index.php">Dashboard</a>
+                <a class="nav-link text-light" href="./index.php">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="/admin/categories.php">Categories</a>
+                <a class="nav-link text-light" href="./categories.php">Categories</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="/admin/products.php">Products</a>
+                <a class="nav-link text-light" href="./products.php">Products</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-light" href="/admin/jobs/logout.php">Logout</a>
+                <a class="nav-link text-light" href="./jobs/logout.php">Logout</a>
             </li>
         </ul>
     </div>
