@@ -58,14 +58,14 @@
                         Links
                     </h4>
                     <div class="info_links">
-                        <a class="active" href="/index.php">
+                        <a class="active" href="./index.php">
                             Home
                         </a>
 
-                        <a class="" href="/catalogue.php">
+                        <a class="" href="./catalogue.php">
                             Catalogue
                         </a>
-                        <a class="" href="/contact.php">
+                        <a class="" href="./contact.php">
                             Contact
                         </a>
                     </div>
