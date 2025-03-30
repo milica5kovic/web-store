@@ -23,10 +23,10 @@ if (isset($_POST['submit'])) {
 
             header('Location: ../index.php?status=Logged in');
         } else {
-            header('Location: /admin/login.php?error=Invalid email or password!');
+            header('Location: ../login.php?error=Invalid email or password!');
         }
     } else {
-        header('Location: /admin/login.php?error=Missing email or password!');
+        header('Location: ../login.php?error=Missing email or password!');
     }
     exit();
 }

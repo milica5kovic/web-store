@@ -3,7 +3,7 @@
 global $pdo;
 session_start();
 if (!isset($_SESSION['user']['status']) || !$_SESSION['user']['status']) {
-    header('location: /admin/login.php');
+    header('location: ../login.php');
     exit();
 }
 

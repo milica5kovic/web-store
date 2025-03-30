@@ -12,5 +12,5 @@ require_once './functions/products.php';
 
 orderProduct($pdo, $id);
 
-header('Location: product.php?id='.$id);
+header('Location: ./product.php?id='.$id);
 exit();

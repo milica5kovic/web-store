@@ -2,7 +2,7 @@
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 } else {
-    header('Location: catalogue.php');
+    header('Location: ./catalogue.php');
     exit();
 }
 

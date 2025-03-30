@@ -2,7 +2,7 @@
 session_start();
 
 if(isset($_SESSION['user']['status'])){
-    header('location: /admin/index.php');
+    header('location: ./index.php');
     exit();
 }
 
