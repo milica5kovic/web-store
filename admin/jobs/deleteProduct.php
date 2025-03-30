@@ -13,13 +13,13 @@ require_once '../../functions/products.php';
 if(isset($_GET['id'])){
     $res = deleteProduct($pdo, $_GET['id']);
     if($res){
-        header('location: /admin/products.php');
+        header('location: ../products.php');
         exit();
     }
 
-    header('location: /admin/products.php?error=1');
+    header('location: ../products.php?error=1');
     exit();
 }
 
-header('location: /admin/products.php');
+header('location: ../products.php');
 exit();

@@ -52,7 +52,7 @@ $product = fetchProduct($pdo, $id);
             <p class="lead"><?= $product['description'] ?></p>
             <h3 class="text-success"><?= $product['price'] ?></h3>
             <?php if($product['stock'] > 0): ?>
-            <a href="/orderJob.php?id=<?= $product['id'] ?>">
+            <a href="./orderJob.php?id=<?= $product['id'] ?>">
                 <button class="btn btn-primary btn-lg mt-3">Buy now</button>
             </a>
             <?php else: ?>
@@ -61,7 +61,7 @@ $product = fetchProduct($pdo, $id);
         </div>
 
         <div class="col-md-6 text-center">
-            <img src="<?= $product['image'] ?>" class="img-fluid rounded shadow-lg" alt="<?= $product['name']; ?>">
+            <img src="./images/<?= $product['image'] ?>" class="img-fluid rounded shadow-lg" alt="<?= $product['name']; ?>">
         </div>
     </div>
 </div>
@@ -72,12 +72,12 @@ $product = fetchProduct($pdo, $id);
         <?php foreach ($newest as $key => $product): ?>
             <div class="col">
                 <div class="card <?= $key === 0 ? 'border-primary shadow-lg' : ''; ?>">
-                    <img src="<?= $product['image_url'] ?>" class="card-img-top"
+                    <img src="./images/<?= $product['image_url'] ?>" class="card-img-top"
                          alt="<?= $product['name'] ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $product['name'] ?></h5>
                         <p class="card-text"><strong><?= $product['price'] ?></strong></p>
-                        <a href="/product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
+                        <a href="./product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
                     </div>
                 </div>
             </div>
@@ -91,12 +91,12 @@ $product = fetchProduct($pdo, $id);
         <?php foreach ($marked as $key => $product): ?>
             <div class="col">
                 <div class="card <?php echo $key === 0 ? 'border-primary shadow-lg' : ''; ?>">
-                    <img src="<?= $product['image_url'] ?>" class="card-img-top"
+                    <img src="./images/<?= $product['image_url'] ?>" class="card-img-top"
                          alt="<?= $product['name'] ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?= $product['name'] ?></h5>
                         <p class="card-text"><strong><?php echo $product['price'] ?></strong></p>
-                        <a href="/product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
+                        <a href="./product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
                     </div>
                 </div>
             </div>

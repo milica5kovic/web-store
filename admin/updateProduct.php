@@ -16,7 +16,7 @@ if (isset($_GET["id"])) {
     $product = fetchProduct($pdo, $id);
     $categories = fetchCategories($pdo);
 } else {
-    header('location: /admin/products.php');
+    header('location: ./admin/products.php');
     exit();
 }
 ?>
@@ -60,8 +60,8 @@ if (isset($_GET["id"])) {
             <div class="card p-4 shadow-sm">
                 <h3>Change Image</h3>
                 <div class="text-center">
-                    <img src="<?= $product['image'] ?>" alt="Product Image" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
-                    <form action="jobs/changeImage.php?id=<?= $product['id'] ?>" method="post" enctype="multipart/form-data">
+                    <img src="../images/<?= $product['image'] ?>" alt="Product Image" class="img-fluid mb-3" style="max-height: 300px; object-fit: cover;">
+                    <form action="./jobs/changeImage.php?id=<?= $product['id'] ?>" method="post" enctype="multipart/form-data">
                         <label for="image" class="form-label">Choose New Image</label>
                         <input type="file" class="form-control" name="image" id="image">
                         <button type="submit" class="btn btn-primary w-100 mt-2">Change</button>
@@ -72,7 +72,7 @@ if (isset($_GET["id"])) {
         <div class="col-md-6">
             <div class="card p-4 shadow-sm">
                 <h3>Edit Product</h3>
-                <form action="jobs/updateProduct.php?id=<?= $product['id'] ?>" method="post" enctype="multipart/form-data">
+                <form action="./jobs/updateProduct.php?id=<?= $product['id'] ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="name" class="form-label">Product Name</label>
                         <input type="text" class="form-control" id="name" name="name" value="<?= $product['name'] ?>" placeholder="Ultra mega max vukadin" required>

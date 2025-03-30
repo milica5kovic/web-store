@@ -13,10 +13,10 @@ require_once '../../dirmap.php';
 if(isset($_GET['id'])) {
     $res = updateProductImage($pdo, $_GET['id']);
     if($res) {
-        header('location: /admin/updateProduct.php?id='.$_GET['id']);
+        header('location: ../updateProduct.php?id='.$_GET['id']);
         exit();
     } else {
-        header('location: /admin/updateProduct.php?id='.$_GET['id'].'&error=1');
+        header('location: ../updateProduct.php?id='.$_GET['id'].'&error=1');
         exit();
     }
 }

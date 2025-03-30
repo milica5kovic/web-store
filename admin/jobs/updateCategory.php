@@ -13,12 +13,12 @@ require_once '../../functions/categories.php';
 if (isset($_GET['id'])) {
     $res = updateCategory($pdo, $_GET['id'], $_GET['name']);
     if ($res) {
-        header('location: /admin/categories.php');
+        header('location: ../categories.php');
         exit();
     }
-    header('location: /admin/categories.php?error=1');
+    header('location: ../categories.php?error=1');
     exit();
 }
 
-header('location: /admin/categories.php');
+header('location: ../categories.php');
 exit();

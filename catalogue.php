@@ -44,11 +44,11 @@ $products = fetchProducts($pdo);
         <?php foreach ($newest as $key => $product): ?>
             <div class="col">
                 <div class="card <?php echo $key === 0 ? 'border-primary shadow-lg' : ''; ?>">
-                    <img src="<?php echo $product['image_url']; ?>" class="card-img-top" alt="<?php echo $product['name']; ?>">
+                    <img src="./images/<?php echo $product['image_url']; ?>" class="card-img-top" alt="<?php echo $product['name']; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $product['name']; ?></h5>
                         <p class="card-text"><strong><?php echo $product['price']; ?></strong></p>
-                        <a href="/product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
+                        <a href="./product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
                     </div>
                 </div>
             </div>
@@ -61,11 +61,11 @@ $products = fetchProducts($pdo);
         <?php foreach ($marked as $key => $product): ?>
             <div class="col">
                 <div class="card <?php echo $key === 0 ? 'border-primary shadow-lg' : ''; ?>">
-                    <img src="<?php echo $product['image_url']; ?>" class="card-img-top" alt="<?php echo $product['name']; ?>">
+                    <img src="./images/<?php echo $product['image_url']; ?>" class="card-img-top" alt="<?php echo $product['name']; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $product['name']; ?></h5>
                         <p class="card-text"><strong><?php echo $product['price']; ?></strong></p>
-                        <a href="/product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
+                        <a href="./product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
                     </div>
                 </div>
             </div>
@@ -80,12 +80,12 @@ $products = fetchProducts($pdo);
                 <?php if ($product['category'] === $category['id']): ?>
                     <div class="col">
                         <div class="card <?=  $key === 0 ? 'border-primary shadow-lg' : ''; ?>">
-                            <img src="<?= $product['image']; ?>" class="card-img-top"
+                            <img src="./images/<?= $product['image']; ?>" class="card-img-top"
                                  alt="<?= $product['name']; ?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?=  $product['name']; ?></h5>
                                 <p class="card-text"><strong><?=  $product['price']; ?></strong></p>
-                                <a href="/product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
+                                <a href="./product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
                             </div>
                         </div>
                     </div>

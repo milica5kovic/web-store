@@ -12,5 +12,5 @@ require_once '../../dirmap.php';
 if (isset($_POST['submit'])) {
     addProduct($pdo, $_SESSION['user']['id'], $_POST['category'], $_POST['name'], $_POST['description'], $_POST['price'], $_POST['stock']);
 }
-header('location: /admin/products.php');
+header('location: ../products.php');
 exit();

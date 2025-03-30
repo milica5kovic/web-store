@@ -13,14 +13,14 @@ require_once '../../functions/products.php';
 if(isset($_POST['submit'])) {
     $res = updateProduct($pdo,$_GET['id'], $_POST['category'], $_POST['name'], $_POST['description'], $_POST['price'], $_POST['stock'], $_POST['mark']);
     if($res) {
-        header('location: /admin/updateProduct.php?id=' . $_GET['id']);
+        header('location: ../updateProduct.php?id=' . $_GET['id']);
     }
     else {
-        header('location: /admin/updateProduct.php?id=' . $_GET['id'] . '&error=1');
+        header('location: ../updateProduct.php?id=' . $_GET['id'] . '&error=1');
     }
     exit();
 }
 
-header('location: /admin/products.php');
+header('location: ../products.php');
 exit();
 

@@ -70,7 +70,7 @@ $newest = newestProducts($pdo);
                                 </div>
                                 <div class="col-md-6">
                                     <div class="img-box">
-                                        <img src="<?= $product['image_url'] ?>" alt="Product image">
+                                        <img src="./images/<?= $product['image_url'] ?>" alt="Product image">
                                     </div>
                                 </div>
                             </div>
@@ -95,12 +95,12 @@ $newest = newestProducts($pdo);
         <?php foreach ($newest as $key => $product): ?>
             <div class="col">
                 <div class="card <?php echo $key === 0 ? 'border-primary shadow-lg' : ''; ?>">
-                    <img src="<?php echo $product['image_url']; ?>" class="card-img-top"
+                    <img src="./images/<?php echo $product['image_url']; ?>" class="card-img-top"
                          alt="<?php echo $product['name']; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $product['name']; ?></h5>
                         <p class="card-text"><strong><?php echo $product['price']; ?></strong></p>
-                        <a href="/product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
+                        <a href="./product.php?id=<?= $product['id'] ?>" class="btn btn-primary">See more</a>
                     </div>
                 </div>
             </div>

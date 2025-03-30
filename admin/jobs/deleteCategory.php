@@ -12,9 +12,9 @@ require_once '../../functions/categories.php';
 if(isset($_GET['id'])){
     $id = $_GET['id'];
     deleteCategory($pdo, $id);
-    header('location: /admin/categories.php?success=true');
+    header('location: ../categories.php?success=true');
     exit();
 }
 
-header('location: /admin/categories.php?success=false');
+header('location: ../categories.php?success=false');
 exit();

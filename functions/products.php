@@ -109,7 +109,7 @@ function updateProduct(PDO $pdo, int $id, ?int $category, string $name, string $
 function updateProductImage(PDO $pdo, int $id): bool
 {
     require_once 'files.php';
-    $image_url = '/images/' . uploadFile();
+    $image_url = uploadFile();
 
     if (!$image_url) {
         return false;
